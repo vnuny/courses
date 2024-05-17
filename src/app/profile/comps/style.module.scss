@@ -1,0 +1,80 @@
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--glass);
+  backdrop-filter: blur(25px);
+  box-shadow: var(--glassBorder);
+  height: fit-content;
+  position: sticky;
+  border-radius: 20px;
+  padding: 10px 15px;
+  top: 140px;
+  margin-right: 40px;
+  width: 250px;
+  min-width: 250px;
+  .title {
+    color: var(--txt);
+    margin-top: 20px;
+    font-size: 1.7em;
+  }
+  .backBtn {
+    display: flex;
+    align-items: center;
+    color: var(--txt);
+    border: 1px solid var(--txt);
+    width: 100px;
+    height: 40px;
+    svg{
+        // background-color: red;  
+        padding-top: 2px;
+    }
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+    padding: 0px 12px;
+    padding-left: 16px;
+    justify-content: space-between;
+    border-radius: 50px;
+
+  }
+  .listHolder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    a{
+        color: var(--txtH);
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px 10px;
+        margin-bottom: 0px;
+
+        &:hover{
+            background-color: rgb(15, 15, 15);
+        }
+    }
+  }
+}
+
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+
+}
+@media screen and (min-width:481px) and (max-width:768px){
+  .sideList{
+    width: 90%;
+    min-width: 90%;
+    margin: 0;
+    top: 0;
+    position: relative;
+  }
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+  .sideList{
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width:1025px) and (max-width:1200px){
+
+}

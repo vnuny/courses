@@ -1,0 +1,221 @@
+.container {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width:90vw;
+
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0px 100px;
+      .top{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        .aboutMeBox {
+          display: flex;
+          align-items: center;
+          margin-bottom: 50px;
+          p{
+            margin-left: 50px;
+            font-size: 1em;
+          }
+          h3{
+            font-weight: 300;
+            font-size: 1.1em;
+          }
+        }
+        .linksBox {
+          display: flex;
+          margin-bottom: 50px;
+          p{
+            margin-left: 50px;
+            font-size: 1em;
+          }
+          div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            a{
+              display: flex;
+              white-space: nowrap;
+              color: var(--txt);
+              cursor: pointer;
+              border: 1px solid var(--border);
+              border-radius: 50px;
+              padding: 5px 15px;
+              margin: 5px;
+              &:hover{
+                background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(54, 54, 54, 0.08));
+              }
+            }
+          }
+        }
+        .socialsBox {
+          display: flex;
+          div{
+            display: flex;
+            flex-direction: row;
+            margin-right: 30px;
+            a{
+              color: var(--txt);
+              display: flex;
+              cursor: pointer;
+              border: 1px solid var(--border);
+              border-radius: 50px;
+              padding: 5px 15px;
+              margin: 5px;
+              font-size: 1em;
+              &:hover{
+                background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(54, 54, 54, 0.08));
+              }
+            }
+          }
+        }
+      }
+      .bottom{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 25px 0;
+        p{
+          color: var(--txtH);
+          font-weight: 100;
+        }
+        div{
+          a{
+            color: var(--txtH);
+            font-weight: 100;
+          }
+          span{
+            color: var(--txtH);
+            margin: 0px 10px;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  .line{
+    height: 1px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 130px;
+  }
+  
+  .line svg{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: -250px;
+    // background-color: red;
+  }
+  
+  .line svg path{
+    stroke: var(--primary);
+    stroke-width: 1px;
+    fill: none;
+  }
+  
+  .line .box{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    margin-bottom: 140px;
+  }
+  
+  .line .box:hover{
+    height: 200px;
+    top: -100px;
+  }
+
+
+  @media screen and  (min-width:320px) and (max-width:480px){
+
+  }
+  @media screen and (min-width:481px) and (max-width:768px){
+    .container{
+      .body{
+        .content{
+          // background-color: red;
+          padding: 0 10px;
+          .top{
+            .aboutMeBox{
+              flex-direction: column;
+              align-items: flex-start;
+              p{
+                margin-bottom: 30px;
+              }
+            }
+            .linksBox{
+              flex-direction: column;
+              p{
+                margin-bottom: 30px;
+              }
+              div{
+                flex-wrap: wrap;
+              }
+            }
+            .socialsBox{
+              p{
+                margin-bottom: 30px;
+              }
+              flex-direction: column;
+              div{
+                margin: 0;
+              }
+            }
+          }
+          .bottom{
+            flex-direction: column-reverse;
+            // background-color: red;
+            align-items: center;     
+            p{
+              margin-top: 10px;
+            }       
+          }
+        }
+      }
+      .line{
+        margin-bottom: 120px;
+      }
+    }
+  }
+  @media screen and (min-width:769px) and (max-width:1024px){
+    .container{
+      .body{
+        .content{
+          padding: 0px 60px;
+          .top{
+            .linksBox{
+              div{
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width:1200px){
+  
+  }  

@@ -1,0 +1,178 @@
+
+
+.sideList {
+  width: fit-content;
+  max-width: 350px;
+  min-width: 300px;
+  background-color: var(--glass);
+  box-shadow: var(--glassBorder);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px 0;
+  --listBorder: rgba(255, 255, 255, 0.098);
+  height: fit-content;
+  .collostion {
+    width: 100%;
+    padding: 0px 10px;
+      h3{
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        background-color: var(--bg);
+        color: var(--txt);
+        font-weight: 400;
+        cursor: pointer;
+        svg{
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            outline: 1px solid var(--listBorder);
+        }
+    }
+    .collostionList {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: black;
+      border-radius: 10px;
+      margin-top: 5px;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+      margin-bottom: 20px;
+      .collostionLinks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        p{
+          width: 100%;
+          color: var(--txtH);
+          margin-bottom: 10px;
+          border-bottom: 1px solid var(--listBorder);
+          padding: 15px 15px;
+        }
+        .links{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a{
+                width: 96%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                border: 1px solid var(--listBorder);
+                border-radius: 10px;
+                margin-bottom: 5px;
+                padding: 0px 10px;
+                span{
+                    max-width: 80%;
+                    word-break: break-all;
+                    max-height: 100%;
+                    overflow-y: scroll;
+                    padding: 5px 0;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                }
+                
+                color: var(--txtH);
+                &:hover{
+                    border: 1px solid var(--txtH);
+                    color: var(--txt);
+                }
+            }
+        }
+      }
+      .collostionLessons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        p{
+            width: 100%;
+            color: var(--txtH);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--listBorder);
+            padding: 15px 15px;
+        }
+        .lessons{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a,button{
+                width: 96%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                border: 1px solid var(--listBorder);
+                border-radius: 10px;
+                margin-bottom: 5px;
+                padding: 0px 10px;
+                color: var(--txtH);
+                background-color: transparent;
+                span{
+                    max-width: 80%;
+                    word-break: break-all;
+                    max-height: 100%;
+                    overflow-y: scroll;
+                    padding: 5px 0;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                }
+                &:hover{
+                    border: 1px solid var(--txtH);
+                    color: var(--txt);
+                }
+          }
+        }
+      }
+    }
+  }
+  .collostionLock{
+    margin-bottom: 5px;
+    h3{
+        color: var(--txtH);
+        cursor: default;
+        &:hover{
+            color: var(--txtH);
+            outline: none;
+        }
+    }
+  }
+}
+
+
+
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+
+}
+@media screen and (min-width:481px) and (max-width:768px){
+ .sideList{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+ }
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+  .sideList{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+ }
+}
+@media screen and (min-width:1025px) and (max-width:1200px){
+}

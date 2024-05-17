@@ -1,0 +1,163 @@
+.main{
+    padding-top: 110px;
+    .wrapper{
+        width: 100%;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        .content{
+            width: 100%;
+            padding: 0px 20px;
+            .courseAdvantages{
+                margin-top: 35px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                h3{
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+            }
+            .box{
+                background-color: var(--glass);
+                box-shadow: var(--glassBorder);
+                width: fit-content;
+                padding: 20px;
+                border-radius: 20px;
+                padding-top: 30px;
+                .btns{
+                    width: 100%;
+                    padding-top: 30px;
+                    border-top: 1px solid var(--border);
+                    margin-top: 30px;
+                    padding-bottom: 10px;
+                    a{
+                        // margin: 0px 10px;
+                        color: var(--txt);
+                        background-color: rgba(0, 145, 0, 0.199);
+                        border: 1px solid rgba(0, 145, 0, 0.199);
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        font-size: 1.3em;
+                        transition: all var(--anim) ease;
+                        &:hover{
+                            background-color: rgba(0, 145, 0, 0.301);
+                        }
+                    }
+                }
+                .courseAdvantages{
+                    margin-top: 35px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    h2{
+                        font-size: 1em;
+                        font-weight: 400;
+                        color: var(--txt);
+                    }
+                    h3{
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                        padding: 8px 10px;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                        width: fit-content;
+                        svg{
+                            margin-left: 10px;
+                        }
+                        background-color: rgba(0, 145, 0, 0.199);
+                        border: 1px solid rgba(0, 145, 0, 0.199);
+                    }
+                }
+                h2{
+                    color: var(--txt);
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                h3{
+                    font-weight: 200;
+                    // max-width: 70%;
+                    width: 850px;
+                    color: var(--txt);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+
+}
+@media screen and (min-width:481px) and (max-width:768px){
+ .main{
+    .wrapper{
+        flex-direction: column;
+        padding: 0 15px;
+        padding-bottom: 30px;
+        
+        .content{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            .box{
+                width: 100%;
+                h3{
+                    width: 100%;
+                }
+            }
+        }
+    }
+ }
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+    .main{
+        .wrapper{
+            flex-direction: column;
+            padding: 0 45px;
+            padding-bottom: 30px;
+            
+            .content{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                .box{
+                    width: 100%;
+                    h3{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+     }
+}
+@media screen and (min-width:1025px) and (max-width:1300px){
+    .main{
+        .wrapper{
+            padding: 0 20px;
+            margin: 0;
+            .content{
+                width: 100%;
+                padding: 0;
+                margin: 0 20px;
+                .box{
+                    width: 100%;
+                    h3{
+                        width: 100%;
+
+                    }
+                    // display: none;
+                }
+            }
+        }
+    }
+}
+
+

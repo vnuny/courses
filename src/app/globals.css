@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  /* color: white; */
+}
+
+
+:root{
+  --bg: black;
+  --txt: white;
+  --txtH: rgb(188, 188, 188);
+  --anim: 0.1s;
+  --red: rgb(255, 56, 56);
+  --border: rgba(255, 255, 255, 0.343);
+  --gradiant1: linear-gradient(to top, #5900fffc 0%, rgba(80, 80, 80, 0.129));
+  --secondary: #050505;
+  --primary: #62ff00;
+  --tranBlack: rgba(255, 236, 210, 0.064);
+  --glass: rgba(255, 255, 255, 0.022);
+  --glassBorder: 0px 0px 0px 1px rgba(255, 255, 255, 0.06);
+}
+
+body{
+  background-color: var(--bg);
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::before{
+    content: "";
+    position: fixed;
+    width: 10px;
+    height: 210px;
+    top: -120px;
+    right: -10px;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+    box-shadow: 0 0 580px 260px #b3ff0013;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,110 @@
+.main{
+    width: 100%;
+    padding-top: 120px;
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 95px;
+        h2{
+            width: 100%;
+            text-align: start;
+            color:  var(--txt);
+            font-size: 1.7em;
+        }   
+        a{
+            border: 1px solid var(--txt);
+            color: var(--txt);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-radius: 50px;
+            &:hover{
+                background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(98, 98, 98, 0.158));
+            }
+            svg{
+                margin-right: 10px;
+            }
+        }
+      }
+
+      .content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .box{
+            width: 80%;
+            .table {
+                color: var(--txt);
+                width: 100%;
+                border-collapse: collapse;
+            
+                th, td {
+                    text-align: start;
+                    padding: 25px 20px;
+                    a{
+                        color: var(--txt);
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid var(--txt);
+                        width: fit-content;
+                        padding: 8px 10px;
+                        border-radius: 10px;
+                        &:hover{
+                            background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(98, 98, 98, 0.158));
+                        }
+                        svg{
+                            margin-right: 10px;
+                        }
+                    }
+                    border-bottom: 1px solid rgba(198, 198, 198, 0.582);
+                }
+            
+                th {
+                    background-color: transparent;
+                }
+            
+                tbody tr {
+                    cursor: pointer;
+                }
+            
+            }
+            
+          }
+      }
+    }
+    margin-bottom: 40px;
+}
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+
+  }
+  @media screen and (min-width:481px) and (max-width:768px){
+    .main{
+        padding-top: 80px;
+        .container {
+            .header {
+                padding: 30px 30px;
+            }
+            .content{
+                .box{
+                    width: 90%;
+                }
+            }
+        }
+    }
+  }
+  @media screen and (min-width:769px) and (max-width:1024px){
+
+  }
+  @media screen and (min-width:1025px) and (max-width:1200px){
+
+  }

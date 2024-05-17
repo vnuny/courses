@@ -1,0 +1,474 @@
+.header{
+    display: flex;
+    width: 100%;
+    padding: 25px 80px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.879);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    .right{
+        display: flex;
+        align-items: center;
+        .logo{
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--txt);
+        }
+        .navigation {
+            margin-right: 30px;
+            // height: 28px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            a{
+                color: var(--txt);
+                font-size: 1em;
+                font-weight: 400;
+                margin: 0 15px;
+                width: fit-content;
+                transition: all var(--anim) ease;
+               &:hover{
+                color: var(--primary);
+               }
+            }
+        }
+    }
+
+    .account{
+        display: flex;
+        align-items: center;
+        a{
+            color: var(--bg);
+            font-size: 1em;
+            font-weight: 400;
+            background-color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            &:nth-child(1){
+                margin-left: 20px;
+                background-color: transparent;
+                color: var(--txt);
+                border: 1px solid var(--txt);
+            }
+        }
+        .hamburger {
+            cursor: pointer;
+            display: none;
+            input {
+              display: none;
+            }
+          
+            svg {
+              height: 3em;
+              transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+          
+            .line {
+              fill: none;
+              stroke: var(--txt);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 3;
+              transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+          
+            .lineTopBottom {
+              stroke-dasharray: 12 63;
+            }
+          
+            input:checked + svg {
+              transform: rotate(-45deg);
+            }
+          
+            input:checked + svg .lineTopBottom {
+              stroke-dasharray: 20 300;
+              stroke-dashoffset: -32.42;
+            }
+        }     
+        .accountBox{
+            display: flex;
+            align-items: center;
+            .cart{
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border: 1px solid var(--txt);
+                position: relative;
+                &:hover{
+                    background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(54, 54, 54, 0.504))
+                }
+                svg{
+                    color: var(--txtH);
+                }
+                span{
+                    position: absolute;
+                    top: -3px;
+                    right: -5px;
+                    background-color: var(--red);
+                    width: 17px;
+                    height: 17px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    color: white;
+                    font-size: 0.7em;
+                }
+            }
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 7px;
+                height: 40px;
+                position: relative;
+                &:hover{
+                    background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(54, 54, 54, 0.504))
+                }
+                span{
+                    position: absolute;
+                    top: -3px;
+                    right: -5px;
+                    background-color: var(--red);
+                    width: 17px;
+                    height: 17px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    color: white;
+                    font-size: 0.7em;
+                }
+                img{
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 15px;
+                    object-fit: cover;
+                }
+            }         
+        }
+    }
+
+    .list{
+        position: absolute;
+        top: 85px;
+        background-color: var(--secondary);
+        backdrop-filter: blur(5px);
+        width: 95%;
+        left: 50%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        transform: translateX(-50%);
+        align-items: center;
+        padding-top: 10px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        opacity: 0;
+        .accountBox{
+            width: 95%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            // min-height: 60px;
+            align-items: center;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            // padding-left: 5px;
+            padding: 10px 10px;
+            .btnsHolder{
+                display: flex;
+            }
+            .notificationBox{
+                background-color: var(--bg);
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 15px;
+                color: white;
+                cursor: pointer;
+                position: relative;
+                &:nth-child(1){
+                    margin-left: 5px;
+                }
+                span{
+                    position: absolute;
+                    background-color: var(--red);
+                    // padding: 7px 4px;
+                    width: 17px;
+                    height: 17px;
+                    top: 5px;
+                    right: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.6em;
+                    border-radius: 50px;
+                }
+            }
+            .accountInfo {
+                display: flex;
+                flex-direction: row-reverse;
+                padding-right: 20px;
+                cursor: pointer;
+                h3{
+                    color: var(--txt);
+                    font-size: 1.3em;
+                    margin-bottom: 2px;
+                }
+                p{
+                    color: var(--txtH);
+                    font-size: 0.7em;  
+                    text-align: start;
+                    width: 100%;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                img{
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 20px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .listNavigation {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 0;
+            a{
+                font-size: 1.1em;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                width: 95%;
+                margin: 5px 0;
+                padding: 0px 20px;
+                color: var(--txt);
+                border-radius: 15px;
+                transition: all var(--anim) ease;
+                &:hover{
+                    outline: 1px solid var(--border);
+                    color: var(--txtH);
+                    padding-left: 10px;
+                }
+            }
+        }
+    }    
+    .fullPageLoading{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 1000;
+        i{
+            color: var(--primary);
+            font-size: 1.5em;
+        }
+    }
+}
+
+
+@media screen and  (min-width:320px) and (max-width:480px){
+    .header{
+        padding: 15px 25px;
+        .right{
+            .navigation{
+                display: none;
+            }
+        }
+        .account{
+            .accountBox{
+                display: none;
+            }
+            .hamburger{
+                display: block;
+            }
+            a{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:815px){
+    .header{
+        padding: 15px 25px;
+        .right{
+            .navigation{
+                display: none;
+            }
+        }
+        .account{
+            .accountBox{
+                display: none;
+            }
+            .hamburger{
+                display: block;
+            }
+            a{
+                display: none;
+            }
+        }
+    }
+
+}
+@media screen and (min-width:816px) and (max-width:1024px){
+    .header{
+        padding: 25px 20px;
+        .list{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width:1025px){
+    .header{
+        padding: 25px 80px;
+        .list{
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width:1200px){
+    .header{
+        padding: 25px 100px;
+        .list{
+            display: none;
+        }
+    }
+}
+
+
+
+
+.LoadingContainer {
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+    }
+    
+    .loader div {
+      width: 8%;
+      height: 24%;
+      background: var(--primary);
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      opacity: 0;
+      border-radius: 50px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      animation: fade458 1s linear infinite;
+    }
+    
+    @keyframes fade458 {
+      from {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0.25;
+      }
+    }
+    
+    .loader .bar1 {
+      transform: rotate(0deg) translate(0, -130%);
+      animation-delay: 0s;
+    }
+    
+    .loader .bar2 {
+      transform: rotate(30deg) translate(0, -130%);
+      animation-delay: -1.1s;
+    }
+    
+    .loader .bar3 {
+      transform: rotate(60deg) translate(0, -130%);
+      animation-delay: -1s;
+    }
+    
+    .loader .bar4 {
+      transform: rotate(90deg) translate(0, -130%);
+      animation-delay: -0.9s;
+    }
+    
+    .loader .bar5 {
+      transform: rotate(120deg) translate(0, -130%);
+      animation-delay: -0.8s;
+    }
+    
+    .loader .bar6 {
+      transform: rotate(150deg) translate(0, -130%);
+      animation-delay: -0.7s;
+    }
+    
+    .loader .bar7 {
+      transform: rotate(180deg) translate(0, -130%);
+      animation-delay: -0.6s;
+    }
+    
+    .loader .bar8 {
+      transform: rotate(210deg) translate(0, -130%);
+      animation-delay: -0.5s;
+    }
+    
+    .loader .bar9 {
+      transform: rotate(240deg) translate(0, -130%);
+      animation-delay: -0.4s;
+    }
+    
+    .loader .bar10 {
+      transform: rotate(270deg) translate(0, -130%);
+      animation-delay: -0.3s;
+    }
+    
+    .loader .bar11 {
+      transform: rotate(300deg) translate(0, -130%);
+      animation-delay: -0.2s;
+    }
+    
+    .loader .bar12 {
+      transform: rotate(330deg) translate(0, -130%);
+      animation-delay: -0.1s;
+    }
+    
+}

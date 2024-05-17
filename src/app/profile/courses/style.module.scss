@@ -1,0 +1,51 @@
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+
+    .container{
+        width: 100%;  
+        height: fit-content;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        .header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 30px 95px;
+            h2{
+                width: 100%;
+                text-align: start;
+                color:  var(--txt);
+                font-size: 1.7em;
+            }   
+            a{
+                border: 1px solid var(--txt);
+                color: var(--txt);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 20px;
+                border-radius: 50px;
+                &:hover{
+                    background: linear-gradient(to bottom, rgb(0, 0, 0) 10%,  rgba(98, 98, 98, 0.158));
+                }
+                svg{
+                    margin-right: 10px;
+                }
+            }
+        }
+        .coursesWrapper {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            height: fit-content;
+            justify-content: center;
+        }
+    }
+
+}
